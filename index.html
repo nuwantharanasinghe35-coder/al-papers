@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/L Past Papers - ExamAPP LK</title>
+    <title>A/L Past Papers</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #3b5998; font-family: Arial, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 500px; width: 90%; text-align: center; }
-        h1 { color: #333; margin-bottom: 10px; font-size: 26px; }
+        .container { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; max-width: 400px; width: 90%; }
+        h1 { color: #333; margin-bottom: 10px; font-size: 28px; }
         .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
-        .subject-btn { display: block; width: 100%; padding: 15px; margin: 12px 0; border: none; border-radius: 10px; color: white; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        .subject-btn { display: block; width: 100%; padding: 15px; margin: 12px 0; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; text-decoration: none; color: white; }
         .biology { background: #8e24aa; }
-        .physics { background: #1e88e5; }
-        .chemistry { background: #43a047; }
-        .subject-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .biology:hover { background: #6a1b9a; transform: translateY(-2px); }
+        .physics { background: #1976d2; }
+        .physics:hover { background: #0d47a1; transform: translateY(-2px); }
+        .chemistry { background: #f57c00; }
+        .chemistry:hover { background: #e65100; transform: translateY(-2px); }
+        .footer { margin-top: 25px; font-size: 12px; color: #999; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📚 A/L Past Papers</h1>
-        <p class="subtitle">ExamAPP LK Science</p>
+        <p class="subtitle">Select Your Subject</p>
         
-        <a href="biology.html" class="subject-btn biology">🧬 BIOLOGY PAST PAPERS</a>
-        <a href="physics.html" class="subject-btn physics">⚡ PHYSICS PAST PAPERS</a>
-        <a href="chemistry.html" class="subject-btn chemistry">⚗️ CHEMISTRY PAST PAPERS</a>
+        <a href="biology.html" class="subject-btn biology">🧬 Biology</a>
+        <a href="physics.html" class="subject-btn physics">⚛️ Physics</a>
+        <a href="chemistry.html" class="subject-btn chemistry">🧪 Chemistry</a>
+        
+        <p class="footer">Made with ❤️ for A/L Students</p>
     </div>
 </body>
 </html>
