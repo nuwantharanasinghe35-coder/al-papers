@@ -3,90 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/L Biology Past Papers</title>
+    <title>A/L Past Papers - ExamAPP LK</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #3b5998;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-        }
-        .container {
-            background: white;
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 26px;
-            text-align: center;
-        }
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 14px;
-            text-align: center;
-        }
-        .paper-btn {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            padding: 15px;
-            margin: 12px 0;
-            border: none;
-            border-radius: 10px;
-            background: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        .paper-btn:hover {
-            background: #45a049;
-            transform: translateX(5px);
-        }
-        .year {
-            background: rgba(255,255,255,0.3);
-            padding: 5px 12px;
-            border-radius: 5px;
-            margin-right: 15px;
-            font-weight: bold;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #3b5998; font-family: Arial, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .container { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 500px; width: 90%; text-align: center; }
+        h1 { color: #333; margin-bottom: 10px; font-size: 26px; }
+        .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
+        .subject-btn { display: block; width: 100%; padding: 15px; margin: 12px 0; border: none; border-radius: 10px; color: white; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        .biology { background: #8e24aa; }
+        .physics { background: #1e88e5; }
+        .chemistry { background: #43a047; }
+        .subject-btn:hover { opacity: 0.9; transform: translateY(-2px); }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>A/L Biology Past Papers</h1>
-        <p class="subtitle">2016 - 2024 Collection</p>
+        <h1>📚 A/L Past Papers</h1>
+        <p class="subtitle">ExamAPP LK Science</p>
         
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2024</span> Biology Paper I
-        </a>
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2024</span> Biology Paper II
-        </a>
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2023</span> Biology Paper I
-        </a>
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2023</span> Biology Paper II
-        </a>
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2022</span> Biology Paper I
-        </a>
-        <a href="#" target="_blank" class="paper-btn">
-            <span class="year">2022</span> Biology Paper II
-        </a>
-        
+        <a href="biology.html" class="subject-btn biology">🧬 BIOLOGY PAST PAPERS</a>
+        <a href="physics.html" class="subject-btn physics">⚡ PHYSICS PAST PAPERS</a>
+        <a href="chemistry.html" class="subject-btn chemistry">⚗️ CHEMISTRY PAST PAPERS</a>
     </div>
-    <p style="text-align:center; color:white; margin-top:20px; font-size:13px;">© 2026 ExamAPP LK Science</p>
 </body>
 </html>
