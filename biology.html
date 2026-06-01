@@ -1,86 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biology Past Papers | A/L 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --bio: #0ea5e9; --bio-dark: #0284c7; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --text-light: #64748b; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: var(--bg); min-height: 100vh; padding: 40px 20px; }
-        .container { background: var(--card); padding: 40px 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); max-width: 600px; width: 100%; margin: 0 auto; border: 1px solid #e2e8f0; }
-        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--bio); text-decoration: none; font-weight: 600; font-size: 14px; margin-bottom: 24px; transition: 0.2s; }
-        .back-btn:hover { color: var(--bio-dark); gap: 12px; }
-        .header { text-align: center; margin-bottom: 32px; }
-        .icon { font-size: 48px; margin-bottom: 12px; }
-        h1 { color: var(--text); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-        .subtitle { color: var(--text-light); font-size: 16px; }
-        .papers-list { display: grid; gap: 12px; }
-        .paper-link { display: flex; align-items: center; gap: 16px; width: 100%; padding: 16px 20px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; background: var(--card); color: var(--text); }
-        .paper-link:hover { border-color: var(--bio); background: var(--bio); color: white; transform: translateX(4px); box-shadow: 0 8px 25px rgba(14,165,233,0.2); }
-        .year { background: #f1f5f9; color: var(--text); padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 700; min-width: 60px; text-align: center; transition: 0.3s; }
-        .paper-link:hover .year { background: rgba(255,255,255,0.2); color: white; }
-        .open-icon { margin-left: auto; font-size: 20px; }
-        .footer { margin-top: 40px; font-size: 14px; color: var(--text-light); text-align: center; border-top: 1px solid #e2e8f0; padding-top: 24px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ජීව විද්‍යාව | සිංහල මාධ්‍ය</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .header { margin-bottom: 32px; padding-top: 20px; }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-btn:hover { color: var(--text); }
+    h1 { 
+      font-size: 32px; 
+      font-weight: 700; 
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .subtitle { font-size: 16px; color: var(--text-light); }
+    .paper-list { display: flex; flex-direction: column; gap: 12px; }
+    .paper-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+    .paper-item:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+      transform: translateX(4px);
+    }
+    .paper-year { font-size: 20px; font-weight: 700; color: var(--text); }
+    .paper-desc { font-size: 14px; color: var(--text-light); margin-top: 4px; }
+    .download-btn {
+      padding: 10px 24px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .download-btn:hover { background: #059669; transform: scale(1.05); }
+    .footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    @media (max-width: 640px) {
+      .paper-item { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .download-btn { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-btn"><span>←</span><span>Back to Home</span></a>
-        <div class="header">
-            <div class="icon">🧬</div>
-            <h1><h1>Biology Past Papers</h1>
-
-<!-- Sinhala Medium Section -->
-<div class="subject-section">
-  <h2>සිංහල මාධ්‍ය | Sinhala Medium</h2>
-  <div class="papers-grid">
-    <a href="pdfs/2024AL-Biology-S.pdf" class="paper-btn" target="_blank">2024 A/L</a>
-    <a href="pdfs/2019AL-Biology-S.pdf" class="paper-btn" target="_blank">2019 A/L</a>
-    <a href="pdfs/2017AL-Biology-S.pdf" class="paper-btn" target="_blank">2017 A/L</a>
-    <a href="pdfs/2016AL-Biology-S.pdf" class="paper-btn" target="_blank">2016 A/L</a>
-  </div>
-</div>
-
-<!-- English Medium Section -->
-<div class="subject-section">
-  <h2>English Medium</h2>
-  <div class="papers-grid">
-    <a href="pdfs/2024AL-Biology-E.pdf" class="paper-btn" target="_blank">2024 A/L</a>
-    <a href="pdfs/2019AL-Biology-E.pdf" class="paper-btn" target="_blank">2019 A/L</a>
-    <a href="pdfs/2017AL-Biology-E.pdf" class="paper-btn" target="_blank">2017 A/L</a>
-    <a href="pdfs/2016AL-Biology-E.pdf" class="paper-btn" target="_blank">2016 A/L</a>
-  </div>
-</div>
-
-<!-- Tamil Medium Section -->
-<div class="subject-section">
-  <h2>தமிழ் மீடியம் | Tamil Medium</h2>
-  <div class="papers-grid">
-    <a href="pdfs/2024AL-Biology-T.pdf" class="paper-btn" target="_blank">2024 A/L</a>
-    <a href="pdfs/2019AL-Biology-T.pdf" class="paper-btn" target="_blank">2019 A/L</a>
-    <a href="pdfs/2017AL-Biology-T.pdf" class="paper-btn" target="_blank">2017 A/L</a>
-    <a href="pdfs/2016AL-Biology-T.pdf" class="paper-btn" target="_blank">2016 A/L</a>
-  </div>
-</div></h1>
-            <p class="subtitle">Click to Open PDF → Press Ctrl+S to Save</p>
-        </div>
-        <div class="papers-list">
-            <a href="pdfs/2024AL-Biology.pdf" class="paper-link" target="_blank">
-                <span class="year">2024</span><span>A/L Biology Paper</span><span class="open-icon">📄</span>
-            </a>
-            <a href="pdfs/2019AL-Biology.pdf" class="paper-link" target="_blank">
-                <span class="year">2019</span><span>A/L Biology Paper</span><span class="open-icon">📄</span>
-            </a>
-            <a href="pdfs/2017AL-Biology.pdf" class="paper-link" target="_blank">
-                <span class="year">2017</span><span>A/L Biology Paper</span><span class="open-icon">📄</span>
-            </a>
-            <a href="pdfs/2016AL-Biology.pdf" class="paper-link" target="_blank">
-                <span class="year">2016</span><span>A/L Biology Paper</span><span class="open-icon">📄</span>
-            </a>
-        </div>
-        <p class="footer">© 2026 A/L Resources</p>
+  <div class="container">
+    <a href="sinhala.html" class="back-btn">← විෂයන් වෙත</a>
+    
+    <div class="header">
+      <h1>🧬 ජීව විද්‍යාව</h1>
+      <p class="subtitle">සිංහල මාධ්‍ය | පසුගිය ප්‍රශ්න පත්‍ර</p>
     </div>
+    
+    <div class="paper-list">
+      <!-- 2024 Paper -->
+      <div class="paper-item">
+        <div>
+          <div class="paper-year">2024 ප්‍රශ්න පත්‍රය</div>
+          <div class="paper-desc">2024 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+        </div>
+        <a href="pdfs/2024AL-Biology-S.pdf" class="download-btn" download>
+          බාගත කරන්න
+        </a>
+      </div>
+      
+      <!-- 2019 Paper -->
+      <div class="paper-item">
+        <div>
+          <div class="paper-year">2019 ප්‍රශ්න පත්‍රය</div>
+          <div class="paper-desc">2019 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+        </div>
+        <a href="pdfs/2019AL-Biology-S.pdf" class="download-btn" download>
+          බාගත කරන්න
+        </a>
+      </div>
+      
+      <!-- 2017 Paper -->
+      <div class="paper-item">
+        <div>
+          <div class="paper-year">2017 ප්‍රශ්න පත්‍රය</div>
+          <div class="paper-desc">2017 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+        </div>
+        <a href="pdfs/2017AL-Biology-S.pdf" class="download-btn" download>
+          බාගත කරන්න
+        </a>
+      </div>
+      
+      <!-- 2016 Paper -->
+      <div class="paper-item">
+        <div>
+          <div class="paper-year">2016 ප්‍රශ්න පත්‍රය</div>
+          <div class="paper-desc">2016 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+        </div>
+        <a href="pdfs/2016AL-Biology-S.pdf" class="download-btn" download>
+          බාගත කරන්න
+        </a>
+      </div>
+      
+      <!-- 2015 Paper -->
+      <div class="paper-item">
+        <div>
+          <div class="paper-year">2015 ප්‍රශ්න පත්‍රය</div>
+          <div class="paper-desc">2015 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+        </div>
+        <a href="pdfs/2015AL-Biology-S.pdf" class="download-btn" download>
+          බාගත කරන්න
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="footer">
+      © 2026 A/L Past Papers | නොමිලේ අධ්‍යාපන සම්පතක්
+    </div>
+  </div>
 </body>
 </html>
