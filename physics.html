@@ -6,159 +6,61 @@
     <title>Physics Past Papers | A/L 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --physics: #f59e0b; 
-            --physics-dark: #d97706; 
-            --bg: #f8fafc; 
-            --card: #ffffff; 
-            --text: #1e293b; 
-            --text-light: #64748b; 
-        }
+        :root { --physics: #f59e0b; --physics-dark: #d97706; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --text-light: #64748b; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: var(--bg); 
-            min-height: 100vh; 
-            padding: 40px 20px; 
-        }
-        .container { 
-            background: var(--card); 
-            padding: 40px 32px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
-            max-width: 600px; 
-            width: 100%; 
-            margin: 0 auto; 
-            border: 1px solid #e2e8f0; 
-        }
-        .back-btn { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px; 
-            color: var(--physics); 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 14px; 
-            margin-bottom: 24px; 
-            transition: 0.2s; 
-        }
-        .back-btn:hover { 
-            color: var(--physics-dark); 
-            gap: 12px; 
-        }
-        .header { 
-            text-align: center; 
-            margin-bottom: 32px; 
-        }
-        .icon { 
-            font-size: 48px; 
-            margin-bottom: 12px; 
-        }
-        h1 { 
-            color: var(--text); 
-            font-size: 28px; 
-            font-weight: 700; 
-            margin-bottom: 8px; 
-        }
-        .subtitle { 
-            color: var(--text-light); 
-            font-size: 16px; 
-        }
-        .papers-list { 
-            display: grid; 
-            gap: 12px; 
-        }
-        .paper-link { 
-            display: flex; 
-            align-items: center; 
-            gap: 16px; 
-            width: 100%; 
-            padding: 16px 20px; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 12px; 
-            font-size: 16px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.3s ease; 
-            text-decoration: none; 
-            background: var(--card); 
-            color: var(--text); 
-        }
-        .paper-link:hover { 
-            border-color: var(--physics); 
-            background: var(--physics); 
-            color: white; 
-            transform: translateX(4px); 
-            box-shadow: 0 8px 25px rgba(245,158,11,0.2); 
-        }
-        .year { 
-            background: #f1f5f9; 
-            color: var(--text); 
-            padding: 6px 12px; 
-            border-radius: 8px; 
-            font-size: 14px; 
-            font-weight: 700; 
-            min-width: 60px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-        .paper-link:hover .year { 
-            background: rgba(255,255,255,0.2); 
-            color: white; 
-        }
-        .footer { 
-            margin-top: 40px; 
-            font-size: 14px; 
-            color: var(--text-light); 
-            text-align: center; 
-            border-top: 1px solid #e2e8f0; 
-            padding-top: 24px; 
-        }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); min-height: 100vh; padding: 40px 20px; }
+        .container { background: var(--card); padding: 40px 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); max-width: 600px; width: 100%; margin: 0 auto; border: 1px solid #e2e8f0; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--physics); text-decoration: none; font-weight: 600; font-size: 14px; margin-bottom: 24px; transition: 0.2s; }
+        .back-btn:hover { color: var(--physics-dark); gap: 12px; }
+        .header { text-align: center; margin-bottom: 32px; }
+        .icon { font-size: 48px; margin-bottom: 12px; }
+        h1 { color: var(--text); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { color: var(--text-light); font-size: 16px; }
+        .papers-list { display: grid; gap: 12px; }
+        .paper-link { display: flex; align-items: center; gap: 16px; width: 100%; padding: 16px 20px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; background: var(--card); color: var(--text); }
+        .paper-link:hover { border-color: var(--physics); background: var(--physics); color: white; transform: translateX(4px); box-shadow: 0 8px 25px rgba(245,158,11,0.2); }
+        .year { background: #f1f5f9; color: var(--text); padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 700; min-width: 60px; text-align: center; transition: 0.3s; }
+        .paper-link:hover .year { background: rgba(255,255,255,0.2); color: white; }
+        .footer { margin-top: 40px; font-size: 14px; color: var(--text-light); text-align: center; border-top: 1px solid #e2e8f0; padding-top: 24px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-btn">
-            <span>←</span>
-            <span>Back to Home</span>
-        </a>
-        
+        <a href="index.html" class="back-btn"><span>←</span><span>Back to Home</span></a>
         <div class="header">
             <div class="icon">⚛️</div>
             <h1>Physics Past Papers</h1>
             <p class="subtitle">A/L Examination Papers Collection</p>
         </div>
-        
         <div class="papers-list">
-            <!-- Update these href links to match your exact PDF filenames -->
-            
-            <a href="2019AL%20Physics.pdf" class="paper-link" target="_blank">
+            <!-- IMPORTANT: Added 'pdfs/' to path + %20 for space -->
+            <a href="pdfs/2019AL%20Physics.pdf" class="paper-link" target="_blank">
                 <span class="year">2019</span>
                 <span>A/L Physics Paper</span>
             </a>
             
-            <a href="2018AL%20Physics.pdf" class="paper-link" target="_blank">
+            <a href="pdfs/2018AL%20Physics%20(1).pdf" class="paper-link" target="_blank">
                 <span class="year">2018</span>
                 <span>A/L Physics Paper</span>
             </a>
             
-            <a href="2017AL%20Physics.pdf" class="paper-link" target="_blank">
+            <a href="pdfs/2017AL%20Physics.pdf" class="paper-link" target="_blank">
                 <span class="year">2017</span>
                 <span>A/L Physics Paper</span>
             </a>
             
-            <a href="2016AL%20Physics.pdf" class="paper-link" target="_blank">
+            <a href="pdfs/2016AL%20Physics.pdf" class="paper-link" target="_blank">
                 <span class="year">2016</span>
                 <span>A/L Physics Paper</span>
             </a>
             
-            <a href="2015AL%20Physics.pdf" class="paper-link" target="_blank">
+            <a href="pdfs/2015AL%20Physics.pdf" class="paper-link" target="_blank">
                 <span class="year">2015</span>
                 <span>A/L Physics Paper</span>
             </a>
-            
         </div>
         <p class="footer">© 2026 A/L Resources</p>
     </div>
 </body>
 </html>
+
