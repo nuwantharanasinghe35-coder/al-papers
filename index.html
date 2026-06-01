@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A/L Science Past Papers | 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;
       --sinhala: #10b981;
       --english: #f59e0b;
       --tamil: #ef4444;
@@ -19,44 +18,61 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', 'Noto Sans Sinhala', 'Noto Sans Tamil', sans-serif;
+      font-family: 'Noto Sans Sinhala', 'Noto Sans Tamil', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
-    .container { max-width: 700px; width: 100%; text-align: center; }
-    h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
-    .subtitle { font-size: 18px; color: var(--text-light); margin-bottom: 48px; }
-    .medium-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    .container { 
+      max-width: 500px; 
+      width: 100%; 
+      text-align: center; 
+    }
+    h1 { 
+      font-size: 32px; 
+      font-weight: 700; 
+      margin-bottom: 12px; 
+    }
+    .subtitle { 
+      font-size: 16px; 
+      color: var(--text-light); 
+      margin-bottom: 40px; 
+    }
+    /* Piliwelata buttons hadana container eka */
+    .medium-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       margin-bottom: 40px;
     }
     .medium-btn {
-      padding: 28px 24px;
+      padding: 20px 32px;
       color: white;
       text-decoration: none;
-      border-radius: 16px;
+      border-radius: 12px;
       font-weight: 700;
       font-size: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
+      width: 100%;
     }
-    .medium-btn:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
-    .medium-btn.sinhala { background: var(--sinhala); font-family: 'Noto Sans Sinhala', sans-serif; }
+    .medium-btn:hover { 
+      transform: translateY(-3px); 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+    }
+    .medium-btn.sinhala { 
+      background: var(--sinhala); 
+      font-family: 'Noto Sans Sinhala', sans-serif; 
+    }
     .medium-btn.english { background: var(--english); }
-    .medium-btn.tamil { background: var(--tamil); font-family: 'Noto Sans Tamil', sans-serif; }
-    .medium-icon { font-size: 32px; }
+    .medium-btn.tamil { 
+      background: var(--tamil); 
+      font-family: 'Noto Sans Tamil', sans-serif; 
+    }
     .footer {
       margin-top: 40px;
       font-size: 14px;
@@ -64,39 +80,34 @@
       border-top: 1px solid var(--border);
       padding-top: 24px;
     }
-    @media (max-width: 640px) {
-      h1 { font-size: 28px; }
-      .medium-btn { font-size: 18px; padding: 24px 20px; }
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      .medium-btn { font-size: 18px; padding: 18px 24px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>A/L Science Past Papers</h1>
-    <p class="subtitle">මාධ්‍යය තෝරන්න | Select Medium | ஊடகத்தைத் தேர்ந்தெடுக்கவும்</p>
+    <h1>උසස් පෙළ විද්‍යා පසුගිය ප්‍රශ්න පත්‍ර</h1>
+    <p class="subtitle">මාධ්‍යය තෝරන්න | Select Medium | ஊடகம்</p>
     
-    <div class="medium-grid">
-      <!-- Sinhala Medium -->
+    <!-- Piliwelata Medium Buttons 3 -->
+    <div class="medium-list">
       <a href="sinhala.html" class="medium-btn sinhala">
-        <span class="medium-icon">🇱🇰</span>
-        <span>සිංහල මාධ්‍ය</span>
+        සිංහල මාධ්‍ය
       </a>
       
-      <!-- English Medium -->
       <a href="english.html" class="medium-btn english">
-        <span class="medium-icon">🇬🇧</span>
-        <span>English Medium</span>
+        English Medium
       </a>
       
-      <!-- Tamil Medium -->
       <a href="tamil.html" class="medium-btn tamil">
-        <span class="medium-icon">🇱🇰</span>
-        <span>தமிழ் மீடியம்</span>
+        தமிழ் மீடியம்
       </a>
     </div>
 
     <div class="footer">
-      © 2026 A/L Past Papers | Free Educational Resource
+      © 2026 A/L Past Papers | නොමිලේ අධ්‍යාපන සම්පතක්
     </div>
   </div>
 </body>
