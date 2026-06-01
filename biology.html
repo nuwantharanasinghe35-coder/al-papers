@@ -1,57 +1,129 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/L Biology Past Papers</title>
+    <title>Biology Past Papers | A/L 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --biology: #10b981;
+            --biology-dark: #059669;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #3b5998; font-family: Arial, sans-serif; min-height: 100vh; }
-        .container { background: white; max-width: 500px; margin: 40px auto; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        h1 { color: #333; margin-bottom: 10px; font-size: 26px; text-align: center; }
-        .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; text-align: center; }
-        .back-btn { display: inline-block; margin-bottom: 20px; color: #8e24aa; text-decoration: none; font-weight: bold; }
-        .paper-btn { display: flex; align-items: center; width: 100%; padding: 15px; margin: 12px 0; border: none; border-radius: 10px; background: #8e24aa; color: white; text-decoration: none; font-size: 16px; transition: 0.3s; }
-        .paper-btn:hover { background: #6a1b9a; transform: translateX(5px); }
-        .year { background: rgba(255,255,255,0.3); padding: 5px 12px; border-radius: 5px; margin-right: 15px; font-weight: bold; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: var(--bg); 
+            min-height: 100vh; 
+            padding: 40px 20px;
+        }
+        .container { 
+            background: var(--card); 
+            padding: 40px 32px; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+            max-width: 600px; 
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--biology);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 24px;
+            transition: 0.2s;
+        }
+        .back-btn:hover {
+            color: var(--biology-dark);
+            gap: 12px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        h1 { 
+            color: var(--text); 
+            font-size: 28px; 
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subtitle { 
+            color: var(--text-light); 
+            font-size: 16px; 
+        }
+        .papers-list {
+            display: grid;
+            gap: 12px;
+        }
+        .paper-link { 
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%; 
+            padding: 16px 20px; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 12px; 
+            font-size: 16px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            text-decoration: none; 
+            background: var(--card);
+            color: var(--text);
+        }
+        .paper-link:hover { 
+            border-color: var(--biology); 
+            background: var(--biology);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 8px 25px rgba(16,185,129,0.2);
+        }
+        .year {
+            background: #f1f5f9;
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            min-width: 60px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .paper-link:hover .year {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .footer { 
+            margin-top: 40px; 
+            font-size: 14px; 
+            color: var(--text-light); 
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        @media (max-width: 480px) {
+            .container { padding: 32px 20px; }
+            h1 { font-size: 24px; }
+            .paper-link { font-size: 15px; padding: 14px 16px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-btn">← Back to Home</a>
-        <h1><p class="subtitle">Available Papers</p>
-        
-        <a href="biology-2024-mcq%20(6).pdf" target="_blank" class="paper-btn">
-            <span class="year">2024</span> Biology MCQ Paper
-        </a>
-        <a href="2019AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2019</span> Biology Paper
-        </a>
-        <a href="2017AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2017</span> Biology Paper
-        </a>
-        <a href="2016AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2016</span> Biology Paper
-        </a>
-        
-    </div>
-</body>
-</html></h1>
-        <p class="subtitle">Available Papers</p>
-        
-        <a href="biology-2024-mcq%20(6).pdf" target="_blank" class="paper-btn">
-            <span class="year">2024</span> Biology MCQ Paper
-        </a>
-        <a href="2019AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2019</span> Biology Paper
-        </a>
-        <a href="2017AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2017</span> Biology Paper
-        </a>
-        <a href="2016AL%20Biology.pdf" target="_blank" class="paper-btn">
-            <span class="year">2016</span> Biology Paper
-        </a>
-        
-    </div>
-</body>
-</html>
+        <a href="index.html" class="back-btn">
+          …
