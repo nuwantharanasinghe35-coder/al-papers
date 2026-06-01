@@ -1,154 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/L Science Past Papers | 2026</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --biology: #10b981;
-            --physics: #f59e0b;
-            --chemistry: #ef4444;
-            --bg: #f8fafc;
-            --card: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: var(--bg); 
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 20px;
-        }
-        .container { 
-            background: var(--card); 
-            padding: 50px 40px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
-            text-align: center; 
-            max-width: 480px; 
-            width: 100%;
-            border: 1px solid #e2e8f0;
-        }
-        .logo {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-        h1 { 
-            color: var(--text); 
-            margin-bottom: 8px; 
-            font-size: 32px; 
-            font-weight: 700;
-        }
-        .subtitle { 
-            color: var(--text-light); 
-            margin-bottom: 40px; 
-            font-size: 16px; 
-            font-weight: 400;
-        }
-        .subjects {
-            display: grid;
-            gap: 16px;
-        }
-        .subject-btn { 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%; 
-            padding: 18px; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 12px; 
-            font-size: 18px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.3s ease; 
-            text-decoration: none; 
-            background: var(--card);
-            color: var(--text);
-        }
-        .subject-btn:hover { 
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        .biology:hover { 
-            border-color: var(--biology); 
-            background: var(--biology);
-            color: white;
-        }
-        .physics:hover { 
-            border-color: var(--physics); 
-            background: var(--physics);
-            color: white;
-        }
-        .chemistry:hover { 
-            border-color: var(--chemistry); 
-            background: var(--chemistry);
-            color: white;
-        }
-        .icon {
-            font-size: 24px;
-        }
-        .footer { 
-            margin-top: 40px; 
-            font-size: 14px; 
-            color: var(--text-light); 
-            border-top: 1px solid #e2e8f0;
-            padding-top: 24px;
-        }
-        @media (max-width: 480px) {
-            .container { padding: 40px 24px; }
-            h1 { font-size: 28px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/L Science Past Papers | 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 48px;
+    }
+    .medium-btn {
+      display: inline-block;
+      padding: 24px 48px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+      transition: all 0.3s ease;
+      font-family: 'Noto Sans Sinhala', sans-serif;
+    }
+    .medium-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.4);
+      background: #1d4ed8;
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+      .medium-btn { padding: 20px 32px; font-size: 18px; }
+      .subtitle { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🎓</div>
-        <h1><h1>A/L Past Papers</h1>
-<p style="text-align: center; margin-bottom: 32px;">Select your medium to view subjects</p>
+  <div class="container">
+    <h1>A/L Science Past Papers</h1>
+    <p class="subtitle">මාධ්‍යය තෝරන්න | Select Your Medium</p>
+    
+    <!-- Sinhala Medium Button -->
+    <a href="sinhala.html" class="medium-btn">
+      සිංහල මාධ්‍ය
+    </a>
 
-<!-- Medium Selection -->
-<div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
-  <a href="sinhala.html" style="padding: 16px 32px; background: #0ea5e9; color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 18px;">
-    සිංහල මාධ්‍ය
-  </a>
-  <a href="english.html" style="padding: 16px 32px; background: #0ea5e9; color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 18px;">
-    English Medium
-  </a>
-  <a href="tamil.html" style="padding: 16px 32px; background: #0ea5e9; color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 18px;">
-    தமிழ் மீடியம்
-  </a>
-</div>
-
-<h2 style="text-align: center; margin-bottom: 24px</h1>
-        <p class="subtitle">Select a subject to access past paper collections</p>
-        
-        <div class="subjects">
-            <a href="biology.html" class="subject-btn biology">
-                <span class="icon">🧬</span>
-                <span>Biology</span>
-            </a>
-            <a href="physics.html" class="subject-btn physics">
-                <span class="icon">⚛️</span>
-                <span>Physics</span>
-            </a>
-            <a href="chemistry.html" class="subject-btn chemistry">
-                <span class="icon">🧪</span>
-                <span>Chemistry</span>
-            </a>
-        </div>
-        
-        <p class="footer">© 2026 A/L Resources. Built for students.</p>
+    <div class="footer">
+      © 2026 A/L Past Papers | Free Educational Resource
     </div>
+  </div>
 </body>
 </html>
  
