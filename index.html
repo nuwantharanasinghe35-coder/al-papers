@@ -4,157 +4,208 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A/L Science Past Papers | 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --sinhala: #10b981;
-      --english: #f59e0b;
-      --tamil: #ef4444;
-      --text: #1e293b;
-      --text-light: #64748b;
-      --bg: #f8fafc;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Noto Sans Sinhala', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Noto Sans Sinhala', 'Noto Sans Tamil', sans-serif;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    /* Full Screen Background Photo */
+    .bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    
+    /* Dark Overlay for Text Readability */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.75) 100%);
+      z-index: -1;
+    }
+    
+    /* Content Container */
+    .container {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
-    }
-    .container { 
-      max-width: 550px; 
-      width: 100%; 
-      text-align: center; 
-    }
-    h1 { 
-      font-size: 32px; 
-      font-weight: 700; 
-      margin-bottom: 12px; 
-    }
-    .subtitle { 
-      font-size: 16px; 
-      color: var(--text-light); 
-      margin-bottom: 32px; 
+      position: relative;
+      z-index: 1;
     }
     
-    /* Photo Background Section with Buttons */
-    .medium-section {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    .content-box {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Title Basha 3nen */
+    .main-title {
+      color: white;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .main-title .si { 
+      font-size: 36px; 
+      font-weight: 700; 
+      display: block;
+      margin-bottom: 8px;
+      font-family: 'Noto Sans Sinhala', sans-serif;
+    }
+    .main-title .en { 
+      font-size: 24px; 
+      font-weight: 600; 
+      display: block;
+      margin-bottom: 8px;
+      opacity: 0.95;
+    }
+    .main-title .ta { 
+      font-size: 28px; 
+      font-weight: 600; 
+      display: block;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      opacity: 0.95;
+    }
+    
+    /* Subtitle - මාධ්‍ය තෝරන්න Basha 3nen */
+    .subtitle-box {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 20px;
       margin-bottom: 32px;
     }
-    .medium-bg {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-    .medium-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 30px;
-      gap: 16px;
-    }
-    .medium-title {
+    .subtitle-box .line {
       color: white;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 6px 0;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-    /* Buttons piliwelata */
+    .subtitle-box .si { font-family: 'Noto Sans Sinhala', sans-serif; }
+    .subtitle-box .ta { font-family: 'Noto Sans Tamil', sans-serif; }
+    
+    /* Buttons Piliwelata */
+    .medium-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
     .medium-btn {
       width: 100%;
-      max-width: 320px;
-      padding: 18px 28px;
+      padding: 22px 32px;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 14px;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 22px;
       backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.15);
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(255,255,255,0.4);
       transition: all 0.3s ease;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    }
-    .medium-btn:hover { 
-      transform: translateY(-3px) scale(1.02); 
-      background: rgba(255,255,255,0.25);
-      border-color: rgba(255,255,255,0.5);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
-    .medium-btn.sinhala { background: rgba(16, 185, 129, 0.9); }
+    .medium-btn:hover { 
+      transform: translateY(-4px) scale(1.02); 
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+    .medium-btn.sinhala { 
+      background: rgba(16, 185, 129, 0.85); 
+      font-family: 'Noto Sans Sinhala', sans-serif;
+    }
     .medium-btn.sinhala:hover { background: rgba(16, 185, 129, 1); }
-    .medium-btn.english { background: rgba(245, 158, 11, 0.9); }
+    .medium-btn.english { background: rgba(245, 158, 11, 0.85); }
     .medium-btn.english:hover { background: rgba(245, 158, 11, 1); }
     .medium-btn.tamil { 
-      background: rgba(239, 68, 68, 0.9); 
+      background: rgba(239, 68, 68, 0.85);
       font-family: 'Noto Sans Tamil', sans-serif;
     }
     .medium-btn.tamil:hover { background: rgba(239, 68, 68, 1); }
     
     .footer {
       font-size: 14px;
-      color: var(--text-light);
-      padding-top: 24px;
+      color: rgba(255,255,255,0.8);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
-    @media (max-width: 480px) {
-      h1 { font-size: 26px; }
-      .medium-bg { height: 420px; }
-      .medium-btn { font-size: 18px; padding: 16px 24px; }
-      .medium-overlay { padding: 30px 20px; }
+    
+    @media (max-width: 640px) {
+      .main-title .si { font-size: 28px; }
+      .main-title .en { font-size: 20px; }
+      .main-title .ta { font-size: 24px; }
+      .subtitle-box .line { font-size: 16px; }
+      .medium-btn { font-size: 18px; padding: 18px 24px; }
     }
   </style>
 </head>
 <body>
+  <!-- Full Screen Background Photo -->
+  <!-- MEKA WENAS KARANNA: images/bg.jpg kiyala uba upload karana photo eke path eka daanna -->
+  <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&h=1080&fit=crop" 
+       alt="Background" 
+       class="bg-image">
+  
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+  
+  <!-- Content -->
   <div class="container">
-    <h1>උසස් පෙළ විද්‍යා පසුගිය ප්‍රශ්න පත්‍ර</h1>
-    <p class="subtitle">A/L Science Past Papers Collection</p>
-    
-    <!-- Photo Background + Buttons Over It -->
-    <div class="medium-section">
-      <!-- ME PHOTO EKA WENAS KARANNA: images/students.jpg kiyala uba upload karana eka daanna -->
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" 
-           alt="Students" 
-           class="medium-bg">
+    <div class="content-box">
       
-      <div class="medium-overlay">
-        <p class="medium-title">මාධ්‍යය තෝරන්න</p>
-        
-        <!-- Sinhala Witharai nam meka witharak thiyapan -->
+      <!-- Title Basha 3nen -->
+      <div class="main-title">
+        <span class="si">උසස් පෙළ විද්‍යා පසුගිය ප්‍රශ්න පත්‍ර</span>
+        <span class="en">A/L Science Past Papers</span>
+        <span class="ta">உயர்தர விஞ்ஞான பழைய வினாத்தாள்கள்</span>
+      </div>
+      
+      <!-- මාධ්‍ය තෝරන්න Basha 3nen -->
+      <div class="subtitle-box">
+        <p class="line si">මාධ්‍යය තෝරන්න</p>
+        <p class="line en">Select Your Medium</p>
+        <p class="line ta">உங்கள் ஊடகத்தைத் தேர்ந்தெடுக்கவும்</p>
+      </div>
+      
+      <!-- Buttons Piliwelata -->
+      <div class="medium-list">
         <a href="sinhala.html" class="medium-btn sinhala">
           සිංහල මාධ්‍ය
         </a>
         
-        <!-- English Medium -->
+        <!-- Sinhala witharai nam yata dekama ain karapan -->
         <a href="english.html" class="medium-btn english">
           English Medium
         </a>
         
-        <!-- Tamil Medium -->
         <a href="tamil.html" class="medium-btn tamil">
           தமிழ் மீடியம்
         </a>
       </div>
-    </div>
 
-    <div class="footer">
-      © 2026 A/L Past Papers | නොමිලේ අධ්‍යාපන සම්පතක්
+      <div class="footer">
+        © 2026 A/L Past Papers | Free Educational Resource
+      </div>
     </div>
   </div>
 </body>
