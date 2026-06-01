@@ -6,97 +6,24 @@
     <title>Chemistry Past Papers | A/L 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --chem: #10b981; 
-            --chem-dark: #059669; 
-            --bg: #f8fafc; 
-            --card: #ffffff; 
-            --text: #1e293b; 
-            --text-light: #64748b; 
-        }
+        :root { --chem: #10b981; --chem-dark: #059669; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --text-light: #64748b; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: var(--bg); 
-            min-height: 100vh; 
-            padding: 40px 20px; 
-        }
-        .container { 
-            background: var(--card); 
-            padding: 40px 32px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
-            max-width: 600px; 
-            width: 100%; 
-            margin: 0 auto; 
-            border: 1px solid #e2e8f0; 
-        }
-        .back-btn { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px; 
-            color: var(--chem); 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 14px; 
-            margin-bottom: 24px; 
-            transition: 0.2s; 
-        }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); min-height: 100vh; padding: 40px 20px; }
+        .container { background: var(--card); padding: 40px 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); max-width: 600px; width: 100%; margin: 0 auto; border: 1px solid #e2e8f0; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--chem); text-decoration: none; font-weight: 600; font-size: 14px; margin-bottom: 24px; transition: 0.2s; }
         .back-btn:hover { color: var(--chem-dark); gap: 12px; }
         .header { text-align: center; margin-bottom: 32px; }
         .icon { font-size: 48px; margin-bottom: 12px; }
         h1 { color: var(--text); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
         .subtitle { color: var(--text-light); font-size: 16px; }
         .papers-list { display: grid; gap: 12px; }
-        .paper-link { 
-            display: flex; 
-            align-items: center; 
-            gap: 16px; 
-            width: 100%; 
-            padding: 16px 20px; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 12px; 
-            font-size: 16px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.3s ease; 
-            text-decoration: none; 
-            background: var(--card); 
-            color: var(--text); 
-        }
-        .paper-link:hover { 
-            border-color: var(--chem); 
-            background: var(--chem); 
-            color: white; 
-            transform: translateX(4px); 
-            box-shadow: 0 8px 25px rgba(16,185,129,0.2); 
-        }
-        .year { 
-            background: #f1f5f9; 
-            color: var(--text); 
-            padding: 6px 12px; 
-            border-radius: 8px; 
-            font-size: 14px; 
-            font-weight: 700; 
-            min-width: 60px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
+        .paper-link { display: flex; align-items: center; gap: 16px; width: 100%; padding: 16px 20px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; background: var(--card); color: var(--text); }
+        .paper-link:hover { border-color: var(--chem); background: var(--chem); color: white; transform: translateX(4px); box-shadow: 0 8px 25px rgba(16,185,129,0.2); }
+        .year { background: #f1f5f9; color: var(--text); padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 700; min-width: 60px; text-align: center; transition: 0.3s; }
         .paper-link:hover .year { background: rgba(255,255,255,0.2); color: white; }
-        .download-icon { margin-left: auto; font-size: 20px; }
-        .footer { 
-            margin-top: 40px; 
-            font-size: 14px; 
-            color: var(--text-light); 
-            text-align: center; 
-            border-top: 1px solid #e2e8f0; 
-            padding-top: 24px; 
-        }
-        @media (max-width: 480px) {
-            .container { padding: 24px 20px; }
-            h1 { font-size: 24px; }
-            .paper-link { font-size: 15px; padding: 14px 16px; }
-        }
+        .open-icon { margin-left: auto; font-size: 20px; }
+        .footer { margin-top: 40px; font-size: 14px; color: var(--text-light); text-align: center; border-top: 1px solid #e2e8f0; padding-top: 24px; }
+        @media (max-width: 480px) { .container { padding: 24px 20px; } h1 { font-size: 24px; } .paper-link { font-size: 15px; padding: 14px 16px; } }
     </style>
 </head>
 <body>
@@ -105,36 +32,36 @@
         <div class="header">
             <div class="icon">🧪</div>
             <h1>Chemistry Past Papers</h1>
-            <p class="subtitle">Click to Download PDF</p>
+            <p class="subtitle">Click to Open → Then Press Ctrl+S to Save</p>
         </div>
         <div class="papers-list">
-            <a href="pdfs/2019AL-Chemistry.pdf" class="paper-link" download="2019AL-Chemistry.pdf">
+            <a href="pdfs/2019AL-Chemistry.pdf" class="paper-link" target="_blank">
                 <span class="year">2019</span>
                 <span>A/L Chemistry Paper</span>
-                <span class="download-icon">⬇️</span>
+                <span class="open-icon">📄</span>
             </a>
-            <a href="pdfs/2018AL-Chemistry.pdf" class="paper-link" download="2018AL-Chemistry.pdf">
+            <a href="pdfs/2018AL-Chemistry.pdf" class="paper-link" target="_blank">
                 <span class="year">2018</span>
                 <span>A/L Chemistry Paper</span>
-                <span class="download-icon">⬇️</span>
+                <span class="open-icon">📄</span>
             </a>
-            <a href="pdfs/2017AL-Chemistry.pdf" class="paper-link" download="2017AL-Chemistry.pdf">
+            <a href="pdfs/2017AL-Chemistry.pdf" class="paper-link" target="_blank">
                 <span class="year">2017</span>
                 <span>A/L Chemistry Paper</span>
-                <span class="download-icon">⬇️</span>
+                <span class="open-icon">📄</span>
             </a>
-            <a href="pdfs/2016AL-Chemistry.pdf" class="paper-link" download="2016AL-Chemistry.pdf">
+            <a href="pdfs/2016AL-Chemistry.pdf" class="paper-link" target="_blank">
                 <span class="year">2016</span>
                 <span>A/L Chemistry Paper</span>
-                <span class="download-icon">⬇️</span>
+                <span class="open-icon">📄</span>
             </a>
-            <a href="pdfs/2015AL-Chemistry.pdf" class="paper-link" download="2015AL-Chemistry.pdf">
+            <a href="pdfs/2015AL-Chemistry.pdf" class="paper-link" target="_blank">
                 <span class="year">2015</span>
                 <span>A/L Chemistry Paper</span>
-                <span class="download-icon">⬇️</span>
+                <span class="open-icon">📄</span>
             </a>
         </div>
-        <p class="footer">© 2026 A/L Resources</p>
+        <p class="footer">Tip: PDF eka open unama Ctrl+S obala save karanna</p>
     </div>
 </body>
 </html>
