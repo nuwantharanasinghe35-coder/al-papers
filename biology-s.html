@@ -30,15 +30,8 @@
       color: var(--text-light);
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.2s;
     }
-    .back-btn:hover { color: var(--text); }
-    h1 { 
-      font-size: 32px; 
-      font-weight: 700; 
-      margin-bottom: 8px;
-      color: var(--primary);
-    }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
     .subtitle { font-size: 16px; color: var(--text-light); }
     .paper-list { display: flex; flex-direction: column; gap: 12px; }
     .paper-item {
@@ -66,18 +59,9 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 15px;
-      transition: all 0.2s;
       white-space: nowrap;
     }
-    .download-btn:hover { background: #059669; transform: scale(1.05); }
-    .footer {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 14px;
-      color: var(--text-light);
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-    }
+    .download-btn:hover { background: #059669; }
     @media (max-width: 640px) {
       .paper-item { flex-direction: column; align-items: flex-start; gap: 16px; }
       .download-btn { width: 100%; text-align: center; }
@@ -87,20 +71,19 @@
 <body>
   <div class="container">
     <a href="sinhala.html" class="back-btn">← විෂයන් වෙත</a>
-    
     <div class="header">
       <h1>🧬 ජීව විද්‍යාව</h1>
       <p class="subtitle">සිංහල මාධ්‍ය | පසුගිය ප්‍රශ්න පත්‍ර</p>
     </div>
-    
     <div class="paper-list">
+      
       <!-- 2024 Paper -->
       <div class="paper-item">
         <div>
           <div class="paper-year">2024 ප්‍රශ්න පත්‍රය</div>
-          <div class="paper-desc">2024 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+          <div class="paper-desc">2024 A/L ජීව විද්‍යාව</div>
         </div>
-        <a href="pdfs/2024AL-Biology-S.pdf" class="download-btn" download>
+        <a href="./pdfs/2024AL-Biology.pdf" target="_blank" class="download-btn">
           බාගත කරන්න
         </a>
       </div>
@@ -109,9 +92,9 @@
       <div class="paper-item">
         <div>
           <div class="paper-year">2019 ප්‍රශ්න පත්‍රය</div>
-          <div class="paper-desc">2019 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+          <div class="paper-desc">2019 A/L ජීව විද්‍යාව</div>
         </div>
-        <a href="pdfs/2019AL-Biology-S.pdf" class="download-btn" download>
+        <a href="./pdfs/2019AL-Biology.pdf" target="_blank" class="download-btn">
           බාගත කරන්න
         </a>
       </div>
@@ -120,9 +103,9 @@
       <div class="paper-item">
         <div>
           <div class="paper-year">2017 ප්‍රශ්න පත්‍රය</div>
-          <div class="paper-desc">2017 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+          <div class="paper-desc">2017 A/L ජීව විද්‍යාව</div>
         </div>
-        <a href="pdfs/2017AL-Biology-S.pdf" class="download-btn" download>
+        <a href="./pdfs/2017AL-Biology.pdf" target="_blank" class="download-btn">
           බාගත කරන්න
         </a>
       </div>
@@ -131,28 +114,26 @@
       <div class="paper-item">
         <div>
           <div class="paper-year">2016 ප්‍රශ්න පත්‍රය</div>
-          <div class="paper-desc">2016 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+          <div class="paper-desc">2016 A/L ජීව විද්‍යාව</div>
         </div>
-        <a href="pdfs/2016AL-Biology-S.pdf" class="download-btn" download>
+        <a href="./pdfs/2016AL-Biology.pdf" target="_blank" class="download-btn">
           බාගත කරන්න
         </a>
       </div>
       
-      <!-- 2015 Paper -->
+      <!-- 2015 Paper - Ube 2015AL-Chemistry & Physics witharai. Biology na. Onethe nam ain karapan -->
+      <!--
       <div class="paper-item">
         <div>
           <div class="paper-year">2015 ප්‍රශ්න පත්‍රය</div>
-          <div class="paper-desc">2015 A/L ජීව විද්‍යාව - සිංහල මාධ්‍ය</div>
+          <div class="paper-desc">2015 A/L ජීව විද්‍යාව</div>
         </div>
-        <a href="pdfs/2015AL-Biology-S.pdf" class="download-btn" download>
+        <a href="./pdfs/2015AL-Biology.pdf" target="_blank" class="download-btn">
           බාගත කරන්න
         </a>
       </div>
+      -->
       
-    </div>
-
-    <div class="footer">
-      © 2026 A/L Past Papers | නොමිලේ අධ්‍යාපන සම්පතක්
     </div>
   </div>
 </body>
